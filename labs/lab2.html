@@ -119,21 +119,37 @@
                         Continuamos utilizando o Google Colab para realizarmos a captura dos vídeos por dois dos integrantes do grupo. Um dos vídeos possui movimentos lentos e espaçados, enquanto o segundo vídeo apresenta movimentos mais rápidos e de menor intervalo de execução.
                     </p>
                     <p>
-                        Em cada versão dos vídeos, nós realizamos a alteração de resolução da captura do vídeo, sendo a primeira versão possuindo 50% da resolução inicial e a segunda versão possuindo 25% da resolução inicial
+                        Em cada versão dos vídeos, nós realizamos a alteração de resolução da captura do vídeo, sendo a primeira versão possuindo 50% da resolução inicial e a segunda versão possuindo 25% da resolução inicial.
                     </p>
                     <p>
-                        Segue abaixo a versão com movimentos lentos original, sem nenhuma alteração em sua resolução.
-                    </p>
-                </p>
+                        Segue abaixo a versão dos videos capturados, sem nenhuma alteração em sua resolução e o codigo utilizado.
+ 
                 <div class="d-flex justify-content-center">
                     <video width="560" height="315" controls>
                         <source src="../assets/img/labs/lab2/video-gabriel.mp4" type="video/mp4">
                     </video>
+                    <video width="560" height="315" controls>
+                        <source src="../assets/img/labs/lab2/video-jessica.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <br>
                 <p>
-                    Agora apresentamos as duas versões com resoluções alteradas em 50% e 25%.
+                    Realizamos as mudanças de resoluções em 50% e 25% para ambos os videos utilizando o codigo abaixo.
                 </p>
+                <pre>
+                    <code class="bash">
+
+# video 1
+!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_50.mp4" -y
+!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_25.mp4" -y
+                        
+# video 2
+!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_50.mp4" -y
+!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_25.mp4" -y
+                    </code>
+                </pre>
+                <p> Segue os videos com as resoluções alteradas em 50% e 25%.</p>
+                <br>
                 <div class="d-flex justify-content-center">
                    
                     <video width="320" class="mr-5" controls>
@@ -144,20 +160,7 @@
                         <source src="../assets/img/labs/lab2/video-gabriel_25.mp4" type="video/mp4">
                     </video>
                 </div>
-
-                <p>
-                    Segue abaixo a versão com movimentos mais rapidos, sem nenhuma alteração em sua resolução.
-                </p>
-            </p>
-            <div class="d-flex justify-content-center">
-                <video width="560" height="315" controls>
-                    <source src="../assets/img/labs/lab2/video-jessica.mp4" type="video/mp4">
-                </video>
-            </div>
-            <br>
-            <p>
-                Agora apresentamos as duas versões com resoluções alteradas em 50% e 25%.
-            </p>
+                <br>
             <div class="d-flex justify-content-center">
                 <video width="320" class="mr-5" controls>
                     <source src="../assets/img/labs/lab2/video-jessica_50.mp4" type="video/mp4">
