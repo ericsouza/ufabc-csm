@@ -70,15 +70,25 @@
                     <img class="img-fluid d-block mx-auto" src="../assets/img/labs/lab2/grupo_legenda.jpg" width="640"/>
                     <br>
                     <p>
-                        Realizamos também a montagem com uma resolução de 1015x756. (basta baixar ou abrir ambas as imagens para comparar as diferentes resoluções)
-                    </p>
-                    <img class="img-fluid d-block mx-auto" src="../assets/img/labs/lab2/grupo_legenda2.jpg" width="440"/>
-                    
-                    <br>
-                    <p>
                         Após criarmos a foto montagem, realizamos a criação da imagem contendo nossos avatares. Escolhemos um avatar de pokémon, para cada integrante do grupo. A fotomontagem dos avatares possui dimensão de 1650x 618 pixels.
                     </p>
                     <img class="img-fluid d-block mx-auto" src="../assets/img/labs/lab2/GRUPO_POKEMON.jpg" width="640"/>
+                    <br>
+                    <p>Utilizamos o codigo abaixo para diminuir a imagem dos avatores, em 50% e 25%</p>
+                    <code class="python">
+
+    print("Tamanho original:", img_avatares.shape)
+    img_50 = cv.resize(img_avatares, None, fx=0.50, fy=0.50, interpolation = cv.INTER_CUBIC)
+    print("Tamanho após redução de 50%", img_50.shape)
+    img_25 = cv.resize(img_avatares, None, fx=0.25, fy=0.25, interpolation = cv.INTER_CUBIC)
+    print("Tamanho após redução de 25%", img_25.shape)
+
+                        </code>
+                    </pre>
+
+                    <img class="img-fluid d-block mx-auto" src="../assets/img/labs/lab2/avatar_50.jpg" width="320"/>
+                    <img class="img-fluid d-block mx-auto" src="../assets/img/labs/lab2/avatar_25.jpg" width="160"/>
+                    
                     <br>
                     <p>
                         Realizamos o procedimento de alteração de imagem para gerarmos a versão P&B das imagens dos integrantes do grupo e de seus supostos avatares. Segue abaixo o codigo utilizado para criação e as imagens criadas.
