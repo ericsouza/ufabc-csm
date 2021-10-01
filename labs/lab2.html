@@ -139,16 +139,30 @@
                 <pre>
                     <code class="bash">
 
-# video 1
+    # video 1
 !ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_50.mp4" -y
 !ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_25.mp4" -y
                         
-# video 2
+    # video 2
 !ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_50.mp4" -y
 !ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_25.mp4" -y
                     </code>
                 </pre>
-                <p> Segue os videos com as resoluções alteradas em 50% e 25%.</p>
+                <p> Segue os videos com as resoluções alteradas em 50% e 25%, juntamente com o codigo utilizado para visualização dos videos.</p>
+                <br>
+                <pre>
+                    <code class="bash">
+    with open(base_path+"/video-jessica_50.mp4",'rb') as file:
+        video1_decoded_50 = "data:video/mp4;base64," + b64encode(file.read()).decode()
+    with open(base_path+"/video-jessica_25.mp4",'rb') as file:
+        video1_decoded_25 = "data:video/mp4;base64," + b64encode(file.read()).decode()
+                    
+    HTML(f"""
+    <video width=320 controls><source src= {video1_decoded_50} type="video/mp4"></video>
+    <video width=160 controls><source src= {video1_decoded_25} type="video/mp4"></video>
+    """)
+                    </code>
+                </pre>
                 <br>
                 <div class="d-flex justify-content-center">
                    
