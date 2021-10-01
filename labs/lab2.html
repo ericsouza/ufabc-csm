@@ -47,7 +47,7 @@
                     <h2 class="text-uppercase">Lab2: Processamento de Imagem</h2>
 
                     <p class="mt-5 item-intro">
-                        Neste laboratório, temos como objetivo o processamento e tratamento de imagens, e para isto, iniciamos os procedimentos utilizando o Google Colab para todos os integrantes executarem os códigos de criação e acesso da pasta ( My Drive/Colab Notebooks) necessária para realizarmos os procedimentos e importamos todas as bibliotecas utilizadas neste laboratório. Segue abaixo o codigo utilizado para este procedimentos.
+                        Neste laboratório, temos como objetivo o processamento e tratamento de imagens, e para isto, iniciamos os procedimentos utilizando o Google Colab para todos os integrantes executarem os códigos de criação e acesso da pasta ( My Drive/Colab Notebooks) necessária para realizarmos os procedimentos e importamos todas as bibliotecas utilizadas neste laboratório. Segue abaixo os codigo utilizado para este procedimentos.
                     </p>
                     <pre>
                         <code class="python">
@@ -57,6 +57,10 @@
     import cv2 as cv
     from google.colab import drive
     from google.colab.patches import cv2_imshow as gcv_imshow
+
+    drive.mount('/content/drive/')
+    base_path = "/content/drive/My Drive/Colab Notebooks/csm/lab2"
+    
                         </code>
                     </pre>
                     <p>
@@ -87,7 +91,7 @@
         horizontal_stack = np.hstack((img, grey_3_channel))
         gcv_imshow(horizontal_stack)
 
-
+    img_grupo = cv.imread(base_path+'/grupo_legenda.jpg')
     print("Grupo: ")
     plot_pb_side_by_side(img_grupo)
     print("\n\nAvatares:")
