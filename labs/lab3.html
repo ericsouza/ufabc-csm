@@ -96,11 +96,20 @@
           <p class="mt-5 item-intro">
             Parte 1 - Criação de um video de Animação
           </p>
-
+          <p class="mt-5 item-intro">
+            Nesta primeira etada do laboratório utilizamos o software Blender e criamos a animação abaixo.
+          </p>
           <p>
             Parte 2 - Alteração e Edição de imagens
           </p>
-
+          <p>
+            Na segunda parte do laboratório, cada integrante do grupo enviou uma foto sua, utilizando roupas de cores diferentes para que alteracemos o espaço de cores
+            das fotos e percebessemos este efeitos em diferentes cores.
+          </p>
+          <p>
+            Cada imagem foi apresentada em formatos BGR e RGB em camadas indivuais, e também YCrCb e HSV que por sua vez, possuem canais individuais.
+            Abaixo segue as imagens originais e as versões criadas para BGR e RGB
+          </p>
           <img
             class="img-fluid d-block mx-auto"
             src="../assets/img/labs/lab2/grupo_legenda.jpg"
@@ -108,10 +117,7 @@
           />
           <br />
           <p>
-            Após criarmos a foto montagem, realizamos a criação da imagem
-            contendo nossos avatares. Escolhemos um avatar de pokémon, para cada
-            integrante do grupo. A fotomontagem dos avatares possui dimensão de
-            1650x 618 pixels.
+            Em seguida temos as imagens em camadas individuais do formato RGB.
           </p>
           <img
             class="img-fluid d-block mx-auto"
@@ -120,166 +126,111 @@
           />
           <br />
           <p>
-            Utilizamos o codigo abaixo para diminuir a imagem dos avatores, em
-            50% e 25%
+            Abaixo temos as imagens em HSV.
           </p>
-          <pre>
-                        <code class="python">
-
-    print("Tamanho original:", img_avatares.shape)
-    img_50 = cv.resize(img_avatares, None, fx=0.50, fy=0.50, interpolation = cv.INTER_CUBIC)
-    print("Tamanho após redução de 50%", img_50.shape)
-    img_25 = cv.resize(img_avatares, None, fx=0.25, fy=0.25, interpolation = cv.INTER_CUBIC)
-    print("Tamanho após redução de 25%", img_25.shape)
-
-                        </code>
-                    </pre>
-
           <img
             class="img-fluid d-block mx-auto"
             src="../assets/img/labs/lab2/avatar_50.png"
             width="320"
           />
           <br />
+          <p>
+            E em formato YCrCb, apresentado abaixo.
+          </p>
           <img
             class="img-fluid d-block mx-auto"
             src="../assets/img/labs/lab2/avatar_25.png"
             width="160"
           />
-
           <br />
           <p>
-            Realizamos o procedimento de alteração de imagem para gerarmos a
-            versão P&B das imagens dos integrantes do grupo e de seus supostos
-            avatares. Segue abaixo o codigo utilizado para criação e as imagens
-            criadas.
+            Realizamos o procedimento para os canais de YCrCb, e mostramos os resultados abaixo. Iniciando pela imagem YCrCB_Y.
           </p>
-          <pre>
-                        <code class="python">
-    def plot_pb_side_by_side(img):
-        grey = cv.cvtColor(img, cv.COLOR_RGB2GRAY)
-        grey_3_channel = cv.cvtColor(grey, cv.COLOR_GRAY2BGR)
-        horizontal_stack = np.hstack((img, grey_3_channel))
-        gcv_imshow(horizontal_stack)
-
-    img_grupo = cv.imread(base_path+'/grupo_legenda.jpg')
-    print("Grupo: ")
-    plot_pb_side_by_side(img_grupo)
-    print("\n\nAvatares:")
-    img_avatares = cv.imread(base_path+'/GRUPO_POKEMON.jpg')
-    plot_pb_side_by_side(img_avatares)
-                        </code>
-                    </pre>
           <br />
           <img
             class="img-fluid d-block mx-auto"
             src="../assets/img/labs/lab2/grupo_PB.png"
             width="640"
           />
+          <p>
+            Nesta temos o YCrCb_Cr
+          </p>
           <img
             class="img-fluid d-block mx-auto"
             src="../assets/img/labs/lab2/avatar_PB.png"
             width="640"
           />
+          <br />
+          <p>
+            Abaixo temos a YCrCb_Cb.
+          </p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab2/avatar_PB.png"
+          width="640"
+        />
+        <br />
+        <br />
+          <p>
+            Parte 3 - Comparação de imagens
+          </p>
+          <p>
+            Nesta parte do laboratório comprimos as imagens dos integrantes do grupo, com qualidade diferentes (utilizamos os fatores 25 e 5) e realizamos as comparações das imagens.
+          </p>
+          <p>
+            Segue abaixo a imagem em fator original para efeito de comparação.
+          </p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab2/avatar_PB.png"
+          width="640"
+        />
+        <br />
+        <p>
+          Temos a imagem alterada utilizando o fator 25.
+        </p>
+        <br />
+        <img
+        class="img-fluid d-block mx-auto"
+        src="../assets/img/labs/lab2/avatar_PB.png"
+        width="640"
+        />
+        <p>
+        E por ultimo a imagem alterada utilizando o fator 05.
+        </p>
+        <br>
+        <img
+      class="img-fluid d-block mx-auto"
+      src="../assets/img/labs/lab2/avatar_PB.png"
+      width="640"
+      />
+      <br>
+      <p>
+      Parte 4 - Compreenssão com DCT
+      </p>
+      <p>
+      Realizamos a compreensão DCT para a imagem 8x8 dos integrantes do grupo, conforme o exemplo utilizado.
+      </p>
+      <img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab2/avatar_PB.png"
+    width="640"
+       />
+      <br>
+      <p>
+        Conforme orientado, realizamos a remoção de mais duas diagonais além das já removidas no exemplo, segue abaixo a imagem.
+      </p>
+      <img
+      class="img-fluid d-block mx-auto"
+      src="../assets/img/labs/lab2/avatar_PB.png"
+      width="640"
+        />
+      <br>
+      <p>
+        Conforme orientado, realizamos a remoção de mais duas diagonais além das já removidas no exemplo, segue abaixo a imagem.
+      </p>
 
-          <br />
-          <p>
-            Continuamos utilizando o Google Colab para realizarmos a captura dos
-            vídeos por dois dos integrantes do grupo. Um dos vídeos possui
-            movimentos lentos e espaçados, enquanto o segundo vídeo apresenta
-            movimentos mais rápidos e de menor intervalo de execução.
-          </p>
-          <p>
-            Em cada versão dos vídeos, nós realizamos a alteração de resolução
-            da captura do vídeo, sendo a primeira versão possuindo 50% da
-            resolução inicial e a segunda versão possuindo 25% da resolução
-            inicial.
-          </p>
-          <p>
-            Segue abaixo a versão dos videos capturados, sem nenhuma alteração
-            em sua resolução.
-          </p>
 
-          <div class="d-flex justify-content-center">
-            <video width="560" height="315" controls>
-              <source
-                src="../assets/img/labs/lab2/video-gabriel.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video width="560" height="315" controls>
-              <source
-                src="../assets/img/labs/lab2/video-jessica.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-          <br />
-          <p>
-            Realizamos as mudanças de resoluções em 50% e 25% para ambos os
-            videos utilizando o codigo abaixo.
-          </p>
-          <pre>
-                    <code class="bash">
-
-    # video 1
-!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_50.mp4" -y
-!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-jessica_25.mp4" -y
-                        
-    # video 2
-!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=320:240 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_50.mp4" -y
-!ffmpeg -i "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel.mp4" -vf scale=160:120 -preset slow -crf 18 "/content/drive/My Drive/Colab Notebooks/csm/lab2/video-gabriel_25.mp4" -y
-                    </code>
-                </pre>
-          <p>
-            Segue os videos com as resoluções alteradas em 50% e 25%, juntamente
-            com o codigo utilizado para visualização dos videos.
-          </p>
-          <br />
-          <pre>
-                    <code class="bash">
-    with open(base_path+"/video-jessica_50.mp4",'rb') as file:
-        video1_decoded_50 = "data:video/mp4;base64," + b64encode(file.read()).decode()
-    with open(base_path+"/video-jessica_25.mp4",'rb') as file:
-        video1_decoded_25 = "data:video/mp4;base64," + b64encode(file.read()).decode()
-                    
-    HTML(f"""
-        --aqui insere o codigo de exibição direcionando para o video desejado--
-    """)
-                    </code>
-                </pre>
-          <br />
-          <div class="d-flex justify-content-center">
-            <video width="320" class="mr-5" controls>
-              <source
-                src="../assets/img/labs/lab2/video-gabriel_50.mp4"
-                type="video/mp4"
-              />
-            </video>
-
-            <video width="160" class="ml-5" controls>
-              <source
-                src="../assets/img/labs/lab2/video-gabriel_25.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-          <br />
-          <div class="d-flex justify-content-center">
-            <video width="320" class="mr-5" controls>
-              <source
-                src="../assets/img/labs/lab2/video-jessica_50.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video width="160" class="ml-5" controls>
-              <source
-                src="../assets/img/labs/lab2/video-jessica_25.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-          <br><br><br>
           <h4>
             Todo o código realizado para
             processamento se encontra no link abaixo:
