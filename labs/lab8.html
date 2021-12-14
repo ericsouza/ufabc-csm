@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grupo 2 - Cod. Sinais Mult.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="../css/styles-fa0f03173a04b7ad0219dfbd642dc958.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html#page-top"
+          ><img src="../assets/img/ufabc.png" alt="..."
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#portfolio"
+                >Laboratórios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#timeline">Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#team"
+                >Quem somos nós (Grupo 2)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead"></header>
+    <div class="mt-5 row justify-content-center">
+      <div class="col-lg-8">
+        <div class="modal-body">
+          <!-- Project details-->
+          <h2 class="text-uppercase">Lab7: Codificação de voz</h2>
+          <audio controls class="mb-3">
+            <source src="../assets/audio/lab7.ogg" type="audio/mpeg" />
+          </audio>
+
+          <h5>Nesse laboratório iremos realizar as seguintes etapas:</h5>
+
+          <p>
+            Utilizando o audio fornecido para o laboratorio recitando o começo da canção Vambora da artista Adriana Calcanhoto, utilizamos o software Audacity para gravar
+            o aluno André Luis Nunes Giannoni recitando a mesma parte da canção.      
+          </p>
+          
+          <p>-Audio fornecido
+          </p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/Entre_Leva_Catia_Falada.wav" type="audio/mpeg" />
+            </audio>
+            </p>
+          <p>-Audio do aluno André</p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/vembora-andre.mp3" type="audio/mpeg" />
+            </audio>
+            </p>    
+          
+          <p>
+            -Nessa etapa os arquivos gravados foram importados como vetores utilizando a biblioteca Librosa, bem como sua respectiva taxa de amostragem. Abaixo segue os plots dos audios ao longo do tempo.
+          </p>
+          <p><img
+            class="img-fluid d-block mx-auto"
+            src="../assets/img/labs/lab7/entre_leva_catia_falada-professor.png"
+            /> 
+        </p>
+        <p><img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab7/vambora-andre.png"
+          /> 
+      </p>
+      <br />
+            <p>
+              Para seguir com as analises deste laboratorio, foi separado somente a primeira estrofe da canção em ambos os audios, mostrado abaixo.
+            </p>
+            <p><img
+              class="img-fluid d-block mx-auto"
+              src="../assets/img/labs/lab7/voz_da_catia_primeira_estrofe.png"
+              /> 
+          </p>
+          <p><img
+            class="img-fluid d-block mx-auto"
+            src="../assets/img/labs/lab7/andre_primeira_estrofe.png"
+            /> 
+        </p>
+          <br />
+          <p>
+           Da mesma forma que realizado no Lab 6, abaixo segue o contorno de energia dos sinais separados em decibéis (dB) em função dos segmentos.
+          </p>
+          <p><img
+            class="img-fluid d-block mx-auto"
+            src="../assets/img/labs/lab7/energia_da_voz_primeira_estrofe_voz_da_catia.png"
+            /> 
+        </p>
+        <p><img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab7/energia_da_voz_primeira_estrofe_andre.png"
+          /> 
+      </p>
+      
+      <p>
+        Nesta etapa, a equipe realizou a separação sonora/surda da primeira estrofe de cada áudio. Foi realizado também os cálculos dos parâmetros LPC, separação U/UV e Espectro + Envoltória LPC. 
+        Abaixo segue primeiramente os parametros referentes ao audio disponibilizado pelo professor.
+        </p>
+        <p><img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab7/voz_da_catia_segmentos_sonoros.png"
+          /> 
+      </p>
+        <br />
+      <p>
+        A seguir temos os parametros encontrados para o audio gravado pelo aluno André.
+      </p>
+      <p><img
+        class="img-fluid d-block mx-auto"
+        src="../assets/img/labs/lab7/andre_segmentos_sonoros.png"
+        /> 
+    </p>
+
+    <br />
+    <p>Trouxe abaixo a tabela referente aos parametros encontrados, para melhor analise.</p>
+    <p><img
+      class="img-fluid d-block mx-auto"
+      src="../assets/img/labs/lab7/tabela-parametros.png"
+      /> 
+  </p>
+  <br />
+  <p>Para seguir com o laboratorio, foi realizado a analise de trajetoria da f0 para ambos os audios. Nesta analise foi utilizado o algoritimo pYIN.</p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab7/trajetoria_da_f0_voz_da_catia.png"
+    /> 
+</p>
+<p><img
+  class="img-fluid d-block mx-auto"
+  src="../assets/img/labs/lab7/trajetoria_da_f0_andre.png"
+  /> 
+</p>
+
+<br />
+<p>Da mesma forma que foi realizado a analise de trajetoria da f0, foi realizado a analise da trajetoria do Pitch de ambos os audios. </p>
+<p><img
+  class="img-fluid d-block mx-auto"
+  src="../assets/img/labs/lab7/trajetoria_do_pitch_voz_da_catia.png"
+  /> 
+</p>
+<p><img
+class="img-fluid d-block mx-auto"
+src="../assets/img/labs/lab7/trajetoria_do_pitch_andre.png"
+/> 
+</p>
+
+<br />
+
+<p>Como ultima etapa do laboratorio, foi relizado a estimativa da frequencia f0 fundamental para cada audio utilizado. Abaixo segue os espectogramas obtidos. </p>
+<p><img
+  class="img-fluid d-block mx-auto"
+  src="../assets/img/labs/lab7/espectograma_enfatizando_f0_voz_da_catia.png"
+  /> 
+</p>
+<p><img
+class="img-fluid d-block mx-auto"
+src="../assets/img/labs/lab7/espectograma_enfatizando_f0_andre.png"
+/> 
+</p>
+<p> Para concluir o laboratorio foi possivel observar que ao analisar o sinal no domínio da frequência é possivel identificar com facilidade os fonemos surdos e sonoros. É possivel também
+  diferenciar ambos os fonemas, uma vez que os fonemas sonoros apresentam uma potencia maior quando comparado com os fonemas surdos. </p>
+
+
+
+        <br /><br />
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <p class="large text-muted"></p>
+            </div>
+          </div>
+          <a href="../index.html">
+            <button class="btn btn-primary btn-xl text-uppercase" type="button">
+              Voltar
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://docs.python.org/3/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/python.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://www.ufabc.edu.br/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/ufabc.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://moodle.ufabc.edu.br/course/view.php?id=2433"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/moodle.png"
+                alt="..."
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <img src="../assets/img/before-footer.jpg" alt="" />
+    </div>
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 my-3 my-lg-0">
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.instagram.com/ufabc/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.facebook.com/ufabc/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.linkedin.com/school/ufabc/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
