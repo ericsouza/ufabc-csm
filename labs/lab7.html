@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grupo 2 - Cod. Sinais Mult.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="../css/styles-fa0f03173a04b7ad0219dfbd642dc958.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html#page-top"
+          ><img src="../assets/img/ufabc.png" alt="..."
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#portfolio"
+                >Laboratórios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#timeline">Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#team"
+                >Quem somos nós (Grupo 2)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead"></header>
+    <div class="mt-5 row justify-content-center">
+      <div class="col-lg-8">
+        <div class="modal-body">
+          <!-- Project details-->
+          <h2 class="text-uppercase">Lab6: PDS da voz</h2>
+          <audio controls class="mb-3">
+            <source src="../assets/audio/lab6.ogg" type="audio/mpeg" />
+          </audio>
+
+          <h5>Nesse laboratório iremos realizar as seguintes etapas:</h5>
+
+          <p>
+            Análises de processamento digital de sinais em espectros de voz. Utilizamos o software Audacity para a captura de voz em todos o experimento realizado.
+            Abaixo segue os audios capturados solicitados no roteiro do laboratorio. Vale ressaltar que este laboratorio será executado somente pelo integrante do grupo André Nunes.      
+          </p>
+          
+          <p>-Numerais de 0 a 9:
+          </p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/audio-numerais.mp3" type="audio/mpeg" />
+            </audio>
+            </p>
+          <p>-Leitura dos digitais do RA:</p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/audio-RA.mp3" type="audio/mpeg" />
+            </audio>
+            </p>    
+          
+          <p>
+            -Realizamos a leitura de um trecho do texto de explicação do curso Bc&T na UFABC. <i>"No curso Bacharelado em Ciência e Tecnologia os estudantes têm a oportunidade de trabalhar e desenvolver temas interdisciplinares, por meio de uma metodologia que incentiva a postura investigativa,
+             estimula a pesquisa e consequente produção científica, o que propicia os meios necessários para desencadear o processo de aprendizagem contínua no decorrer da sua futura vida acadêmica e profissional."</i>
+          </p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/audio-texto.mp3" type="audio/mpeg" />
+            </audio>
+            </p> 
+            <p>
+              -Declamamos em forma de poesia um trecho da musica "Pra voce Guardei o amor" do musico e compositor Nando Reis</i>
+            </p>
+            <p> 
+              <audio controls class="mb-3">
+                <source src="../assets/audio/audio-poesia.mp3" type="audio/mpeg" />
+              </audio>
+              </p> 
+          
+          <br />
+          <p>
+            Os arquivos gravados foram importados como vetores utilizando a biblioteca Librosa e apresentamos a seguir os plots dos sinais de áudio no tempo para cada uma das gravações.
+          </p>
+          <p><img
+            class="img-fluid d-block mx-auto"
+            src="../assets/img/labs/lab6/audio-numerais-1.png"
+            /> 
+        </p>
+        <p><img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab6/audio-RA-1.png"
+          /> 
+      </p>
+      <p><img
+        class="img-fluid d-block mx-auto"
+        src="../assets/img/labs/lab6/audio-texto-1.png"
+        /> 
+      </p>
+      <p><img
+      class="img-fluid d-block mx-auto"
+      src="../assets/img/labs/lab6/audio-poesia-1.png"
+        /> 
+      </p>    
+      <p>
+         Podemos reparar os formatos de faixas diferentes entre os audios e obter algumas conclusões. Por exemplo, os audios de numerais e numero do RA, vemos intervalos 
+         nas faixas onde a captura de audio (ou ruido) onde não há captura de som, isso ocorre pelo modo devagar e pausado gravado nos audios, onde existe um intervalo entre cada numeral falado.
+         Por outro lado, nos audios de texto e poesia, temos uma fala mais continua com intervalos menores, e com isso conseguimos reparar tempos menores de baixa frequencia nas faixas, uma vez que se possui menores intervalos durante a leitura.
+        </p>
+
+        <p>Abaixo segue a figura plotada da Janela da Hamming solicitada.</p>
+
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab6/janela-hamming.png"
+        />
+        <br />
+      <p>
+        Seguimos o laboratorio trazendo as informações de energia de tempo curto da voz, abaixo segue a platagem referente a cada um dos audios.
+      </p>
+
+      <p><img
+        class="img-fluid d-block mx-auto"
+        src="../assets/img/labs/lab6/energia-audio-numerais.png"
+        /> 
+    </p>
+    <p><img
+      class="img-fluid d-block mx-auto"
+      src="../assets/img/labs/lab6/energia-audio-RA.png"
+      /> 
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/energia-audio-texto.png"
+    /> 
+  </p>
+  <p><img
+  class="img-fluid d-block mx-auto"
+  src="../assets/img/labs/lab6/energia-audio-poesia.png"
+    /> 
+  </p>
+  <p>
+    Devido ao fato de executar este laboratorio sozinho, não é possivel realizar a comparação de comportamento com outra pessoa. Porém é possivel notar 
+    o padrão de energia na minha voz, batendo no maximo 60db.
+    Também é notavel o fato que em nenhum momento a energia se encontra no eixo de 0db, podendo associar isso a possivel ruido do microfone.
+  </p>
+
+  <br />
+  <p>
+    Seguimos o laboratorio trazendo as informações de <b>Espectogramas</b> dos audios, abaixo segue referente a cada um dos audios.
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/espectrograma-audio-numerais.png"
+    /> 
+</p>
+<p><img
+  class="img-fluid d-block mx-auto"
+  src="../assets/img/labs/lab6/espectrograma-audio-RA.png"
+  /> 
+</p>
+<p><img
+class="img-fluid d-block mx-auto"
+src="../assets/img/labs/lab6/espectrograma-audio-texto-1.png"
+/> 
+</p>
+<p><img
+class="img-fluid d-block mx-auto"
+src="../assets/img/labs/lab6/espectrograma-audio-poesia-1.png"
+/> 
+</p>
+
+<p>
+  Podemos notar nos espectrograma os momentos de silencio, onde existe uma pausa na voz, este momento acontece principalmente nos audios de numerais e de RA, uma vez que o metodo 
+  de fala neste audios possuem intervalos definidos.
+  No audio de texto, vemos o poucos intervalos de pausa e de silencia, uma vez que o texto apresenta uma fala mais continua e de pouco intervalo.
+  O audio de poesia mescla um pouco do comportamento dos anteriores, apresentando poucos intervalos durante a leitura e um momento de silencio durante as trocas de estrofes.
+</p>
+<br/>
+<p>Nesta proxima etapa foi obtido o período de pitch dos sinais por meio da análise entre os picos sucessivos da função de autocorrelação dos sinais. 
+  Na primeira imagem utilizamos o fonema "ze" do inicio do numero zero. Na segunda imagem utilizando o fonema "ba" do inicio do da palavra "bacharelado" contida no audio texto
+  e na terceira imagem temos o fonema "am" da palavra "amor" contida no audio poesia.</p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-numerais-ze.png"
+    /> 
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-texto-op-1.png"
+    /> 
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-poesia-am-1.png"
+    /> 
+  </p>
+  <p>Realizamos o procedimento para encontrar os espectros das vogais acima, marcando nas imagens as formantes de f1 a f4.</p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-numerais-ze-2.png"
+    /> 
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-texto-op-2.png"
+    /> 
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/correlacao-audio-poesia-am-2.png"
+    /> 
+  </p>
+  <p>Para finalizar o laboratorio, marcamos no espectrograma do audio de digitos lugares onde se encontram /m/ /s/ e /t/.
+    Segue abaixo a imagem.
+  </p>
+  <p><img
+    class="img-fluid d-block mx-auto"
+    src="../assets/img/labs/lab6/espectrograma-audio-numerais-MST.png"
+    /> 
+  </p>
+  <p>Atraves deste experimento, foi possível reforçar alguns conceitos teóricos associados ao processamento digital de sinais de áudio. 
+    Foi possível identificar um conjunto de fatores que pode influenciar na gravação e qualidade dos audios capturados, tais como velocidade, entonação e respiração. Foi possível verificar sutis diferenças nas formas de onda dos sinais ao longo do tempo. 
+    Infelizmente devido a execução do laboratorio somente por um dos integrantes, não foi possivel realizar a comparação de energia da voz e espectrograma, faltando assim conclusões referentes a essas comparações.</p>
+
+        <br /><br />
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <p class="large text-muted"></p>
+            </div>
+          </div>
+          <a href="../index.html">
+            <button class="btn btn-primary btn-xl text-uppercase" type="button">
+              Voltar
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://docs.python.org/3/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/python.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://www.ufabc.edu.br/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/ufabc.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://moodle.ufabc.edu.br/course/view.php?id=2433"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/moodle.png"
+                alt="..."
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <img src="../assets/img/before-footer.jpg" alt="" />
+    </div>
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 my-3 my-lg-0">
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.instagram.com/ufabc/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.facebook.com/ufabc/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.linkedin.com/school/ufabc/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
