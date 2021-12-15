@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grupo 2 - Cod. Sinais Mult.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link
+      href="../css/styles-fa0f03173a04b7ad0219dfbd642dc958.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html#page-top"
+          ><img src="../assets/img/ufabc.png" alt="..."
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#portfolio"
+                >Laboratórios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#timeline">Aulas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#team"
+                >Quem somos nós (Grupo 2)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead"></header>
+    <div class="mt-5 row justify-content-center">
+      <div class="col-lg-8">
+        <div class="modal-body">
+          <!-- Project details-->
+          <h2 class="text-uppercase">Lab8: Codificação de audio</h2>
+          <audio controls class="mb-3">
+            <source src="../assets/audio/lab8.ogg" type="audio/mpeg" />
+          </audio>
+
+          <h5>Nesse laboratório iremos realizar as seguintes etapas:</h5>
+
+          <p>
+            Utilizando  as possibilidades de codificações ffmpeg de áudio trazendo audios codificados em taxas fixas e variáveis onde observamos os efeitos dessas codificações nas formas de onda, espectrogramas e no arquivo de áudio resultante. 
+            Essas análises também foram feitas explorando o comando ffmpeg para aumentar e diminuir a velocidade de reprodução dos áudios. 
+          </p>
+          
+          <p>-Começamos o laboratorio trazendo o audio original Fornecido (Abba - Fernando) em 320kbps.
+          </p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/lab8/ABBA_Fernando.wav" type="audio/mpeg" />
+            </audio>
+            </p>
+          <p>Abaixo a versão do audio original Fornecido (Abba - Fernando) em 128kbps.</p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/lab8/abba128k.mp3" type="audio/mpeg" />
+            </audio>
+            </p>   
+            <p>Abaixo a versão do audio original Fornecido (Abba - Fernando) em 64kbps.</p>
+            <p> 
+              <audio controls class="mb-3">
+                <source src="../assets/audio/lab8/abba64k.mp3" type="audio/mpeg" />
+              </audio>
+              </p>
+              <p>Abaixo a versão do audio original Fornecido (Abba - Fernando) em 32kbps.</p>
+              <p> 
+                <audio controls class="mb-3">
+                  <source src="../assets/audio/lab8/abba32k.mp3" type="audio/mpeg" />
+                </audio>
+                </p>
+                <p>Abaixo a versão do audio original Fornecido (Abba - Fernando) em 16kbps.</p>
+                <p> 
+                  <audio controls class="mb-3">
+                    <source src="../assets/audio/lab8/abba16k.mp3" type="audio/mpeg" />
+                  </audio>
+                  </p>
+              <p>Abaixo a versão do audio original Fornecido (Abba - Fernando) em 8kbps.</p>
+              <p> 
+              <audio controls class="mb-3">
+                <source src="../assets/audio/lab8/abba8k.mp3" type="audio/mpeg" />
+              </audio>
+              </p>
+              <p>
+                Seguimos os procedimentos utilizando o audio original fornecido, trazendo assim as formas de ondas para todas as versões criadas acima.
+              </p>
+              <br /> 
+              <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 320kbps.</p>              
+              <p>
+                <img
+                class="img-fluid d-block mx-auto"
+                src="../assets/img/labs/lab8/Forma_de_onda_320k.png"
+                /> 
+               </p>
+               <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 128kbps.</p>              
+               <p>
+                 <img
+                 class="img-fluid d-block mx-auto"
+                 src="../assets/img/labs/lab8/Forma_de_onda_128k.png"
+                 /> 
+                </p>
+                <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 64kbps.</p>              
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/Forma_de_onda_64k.png"
+                  /> 
+                 </p>
+                            <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 32kbps.</p>              
+               <p>
+                 <img
+                 class="img-fluid d-block mx-auto"
+                 src="../assets/img/labs/lab8/Forma_de_onda_32k.png"
+                 /> 
+                </p>
+                <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 16kbps.</p>              
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/Forma_de_onda_16k.png"
+                  /> 
+                 </p>
+                 <p>Forma de onda para o audio original Fornecido (Abba - Fernando) em 8kbps.</p>              
+                 <p>
+                   <img
+                   class="img-fluid d-block mx-auto"
+                   src="../assets/img/labs/lab8/Forma_de_onda_8k.png"
+                   /> 
+                  </p>
+
+             <p>
+               Seguimos os procedimentos utilizando o audio original fornecido, trazendo assim os espectrogramas das versões criadas.
+            </p>
+            <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 320kbps.</p>              
+            <p>
+              <img
+              class="img-fluid d-block mx-auto"
+              src="../assets/img/labs/lab8/Espectrograma_320k.png"
+              /> 
+             </p>
+             <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 128kbps.</p>              
+             <p>
+               <img
+               class="img-fluid d-block mx-auto"
+               src="../assets/img/labs/lab8/Espectrograma_128k.png"
+               /> 
+              </p>
+              <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 64kbps.</p>              
+              <p>
+                <img
+                class="img-fluid d-block mx-auto"
+                src="../assets/img/labs/lab8/Espectrograma_64k.png"
+                /> 
+               </p>
+               <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 32kbps.</p>              
+               <p>
+                 <img
+                 class="img-fluid d-block mx-auto"
+                 src="../assets/img/labs/lab8/Espectrograma_32k.png"
+                 /> 
+                </p>
+                <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 16kbps.</p>              
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/Espectrograma_16k.png"
+                  /> 
+                 </p>
+                 <p>Espectograma  do audio original Fornecido (Abba - Fernando) em 8kbps.</p>              
+                 <p>
+                   <img
+                   class="img-fluid d-block mx-auto"
+                   src="../assets/img/labs/lab8/Espectrograma_8k.png"
+                   /> 
+                  </p>
+              <br />
+              <p>Seguindo as etapas do laboratorio, apresentamos abaixo o audios original com sua velocidade de execução alterada.</p>
+              <p>Audio original com velocidade aumentada 2x.</p>
+              <p><audio controls class="mb-3">
+                <source src="../assets/audio/lab8/abba320k_v2-rapido.mp3" type="audio/mpeg" />
+              </audio>
+            </p>
+            <br />
+            <p>Audio original com velocidade reduzida em 2x.</p>
+            <p><audio controls class="mb-3">
+              <source src="../assets/audio/lab8/abba320k_v05-devagar.mp3" type="audio/mpeg" />
+            </audio>
+          </p>
+          <br />
+
+        <p>Com isso, temos também a forma de onda e espectrograma de ambos os audios com velocidade alteradas.</p>
+        <p>Abaixo segue a forma de onda e espectrograma do audio com velocidade aumentada em 2x.</p>
+        <p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab8/Forma_de_onda_fer320_2x-rapido.png"
+          /> 
+         </p>
+         <p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab8/Espectrograma_fer320_2x-rapido.png"
+          /> 
+         </p>
+
+         <br />
+         <p>Abaixo temos a forma de onda e espectrogama do audio com velocidade reduzida em 2x.</p>
+         <p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab8/Forma_de_onda_fer320_05x-devagar.png"
+          /> 
+         </p>
+         <p>
+          <img
+          class="img-fluid d-block mx-auto"
+          src="../assets/img/labs/lab8/Espectrograma_fer320_05x-devagar.png"
+          /> 
+         </p>
+
+        <br />
+        <h3>Etapa 2 - audio escolhido foi Upside Down - Jack Jhonson </h3>
+        <p>Abaixo segue a versão original do audio escolhido.</p>
+        <p> 
+          <audio controls class="mb-3">
+            <source src="../assets/audio/lab8/upside_down.mp3" type="audio/mpeg" />
+          </audio>
+          </p>
+          <p>Iremos apresentar os fatores de qualidade de 0 a 9 abaixo. </p>
+          <p>-Upside Down - fator de Qualidade 0</p>
+          <p> 
+            <audio controls class="mb-3">
+              <source src="../assets/audio/lab8/upside_down/upside_down_qa0.mp3" type="audio/mpeg" />
+            </audio>
+            </p>
+
+            <p>-Upside Down - fator de Qualidade 1</p>
+            <p> 
+              <audio controls class="mb-3">
+                <source src="../assets/audio/lab8/upside_down/upside_down_qa1.mp3" type="audio/mpeg" />
+              </audio>
+              </p>
+
+              <p>-Upside Down - fator de Qualidade 2</p>
+              <p> 
+                <audio controls class="mb-3">
+                  <source src="../assets/audio/lab8/upside_down/upside_down_qa2.mp3" type="audio/mpeg" />
+                </audio>
+                </p>
+
+                <p>-Upside Down - fator de Qualidade 3</p>
+                <p> 
+                  <audio controls class="mb-3">
+                    <source src="../assets/audio/lab8/upside_down/upside_down_qa3.mp3" type="audio/mpeg" />
+                  </audio>
+                  </p>
+
+                  <p>-Upside Down - fator de Qualidade 4</p>
+                  <p> 
+                    <audio controls class="mb-3">
+                      <source src="../assets/audio/lab8/upside_down/upside_down_qa4.mp3" type="audio/mpeg" />
+                    </audio>
+                    </p>
+
+                    <p>-Upside Down - fator de Qualidade 5</p>
+                    <p> 
+                      <audio controls class="mb-3">
+                        <source src="../assets/audio/lab8/upside_down/upside_down_qa5.mp3" type="audio/mpeg" />
+                      </audio>
+                      </p>
+
+                      <p>-Upside Down - fator de Qualidade 6</p>
+                      <p> 
+                        <audio controls class="mb-3">
+                          <source src="../assets/audio/lab8/upside_down/upside_down_qa6.mp3" type="audio/mpeg" />
+                        </audio>
+                        </p>
+
+                        <p>-Upside Down - fator de Qualidade 7</p>
+                        <p> 
+                          <audio controls class="mb-3">
+                            <source src="../assets/audio/lab8/upside_down/upside_down_qa7.mp3" type="audio/mpeg" />
+                          </audio>
+                          </p>
+                          <p>-Upside Down - fator de Qualidade 8</p>
+                        <p> 
+                          <audio controls class="mb-3">
+                            <source src="../assets/audio/lab8/upside_down/upside_down_qa8.mp3" type="audio/mpeg" />
+                          </audio>
+
+                          </p>
+                          <p>-Upside Down - fator de Qualidade 9</p>
+                        <p> 
+                          <audio controls class="mb-3">
+                            <source src="../assets/audio/lab8/upside_down/upside_down_qa9.mp3" type="audio/mpeg" />
+                          </audio>
+                          </p>
+
+
+                <p>Trazemos abaixo os espectrogramas referentes aos audios de qualidade 0 a 9</p>
+                <p>Abaixo segue o espectrograma do audio com qualidade 0</p>
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/upside_down_qa0.png"
+                  /> 
+                 </p>
+
+                 <p>Segue o espectrograma do audio com qualidade 1</p>
+                 <p>
+                   <img
+                   class="img-fluid d-block mx-auto"
+                   src="../assets/img/labs/lab8/upside_down_qa1.png"
+                   /> 
+                  </p>
+                  <p>Segue o espectrograma do audio com qualidade 2</p>
+                  <p>
+                    <img
+                    class="img-fluid d-block mx-auto"
+                    src="../assets/img/labs/lab8/upside_down_qa2.png"
+                    /> 
+                   </p>
+                   <p>Segue o espectrograma do audio com qualidade 3</p>
+                   <p>
+                     <img
+                     class="img-fluid d-block mx-auto"
+                     src="../assets/img/labs/lab8/upside_down_qa3.png"
+                     /> 
+                    </p>
+                        <p>Segue o espectrograma do audio com qualidade 4</p>
+                 <p>
+                   <img
+                   class="img-fluid d-block mx-auto"
+                   src="../assets/img/labs/lab8/upside_down_qa4.png"
+                   /> 
+                  </p>
+                  <p>Segue o espectrograma do audio com qualidade 5</p>
+                  <p>
+                    <img
+                    class="img-fluid d-block mx-auto"
+                    src="../assets/img/labs/lab8/upside_down_qa4.png"
+                    /> 
+                   </p>
+                   <p>Segue o espectrograma do audio com qualidade 6</p>
+                   <p>
+                     <img
+                     class="img-fluid d-block mx-auto"
+                     src="../assets/img/labs/lab8/upside_down_qa6.png"
+                     /> 
+                    </p>
+                    <p>Segue o espectrograma do audio com qualidade 7</p>
+                    <p>
+                      <img
+                      class="img-fluid d-block mx-auto"
+                      src="../assets/img/labs/lab8/upside_down_qa7.png"
+                      /> 
+                     </p>
+                     <p>Segue o espectrograma do audio com qualidade 8</p>
+                     <p>
+                       <img
+                       class="img-fluid d-block mx-auto"
+                       src="../assets/img/labs/lab8/upside_down_qa8.png"
+                       /> 
+                      </p>
+                      <p>Segue o espectrograma do audio com qualidade 9</p>
+                      <p>
+                        <img
+                        class="img-fluid d-block mx-auto"
+                        src="../assets/img/labs/lab8/upside_down_qa9.png"
+                        /> 
+                       </p>
+
+              <br />
+              <br />
+              <p>Seguindo o laboratorio, alteramos a velocidade do audio Upside Down</p>
+              <p>Abaixo segue a versão do audio com a velocidade aumentada em 2x e o seu referente espectrograma</p>
+              <p> 
+                <audio controls class="mb-3">
+                  <source src="../assets/audio/lab8/upside_down/upside_down_v2.wav" type="audio/mpeg" />
+                </audio>
+                </p>
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/Espectrograma_upside_down-rapido.png"
+                  /> 
+                 </p>
+
+                <p>Segue a versão do audio com a velocidade diminuida em 2x</p>
+              <p> 
+                <audio controls class="mb-3">
+                  <source src="../assets/audio/lab8/upside_down/upside_down_v05.wav" type="audio/mpeg" />
+                </audio>
+                </p>
+                <p>
+                  <img
+                  class="img-fluid d-block mx-auto"
+                  src="../assets/img/labs/lab8/Espectrograma_upside_down-devagar.png"
+                  /> 
+                 </p>
+
+                 <p>Apos executar as analises dos audios e os fatores de qualidade, podemos perceber que não houve uma "grande" taxa de compresão de audio, acredito
+                   que o motivo por tras disso, seja referente a utilização de um audio ja em formato mp3 desde o inicio, ou seja, um audio onde as grandes faixas de comprensão 
+                   de arquivo ja havia sido executado, onde infelizmente eu percebi este erro somente no final do relatorio.
+                 </p>
+
+                
+
+
+
+
+
+
+
+
+
+
+            +
+
+       
+
+
+
+        <br /><br />
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <p class="large text-muted"></p>
+            </div>
+          </div>
+          <a href="../index.html">
+            <button class="btn btn-primary btn-xl text-uppercase" type="button">
+              Voltar
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://docs.python.org/3/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/python.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://www.ufabc.edu.br/"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/ufabc.png"
+                alt="..."
+            /></a>
+          </div>
+          <div class="col-md-4 col-sm-6 my-3">
+            <a href="https://moodle.ufabc.edu.br/course/view.php?id=2433"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="../assets/img/logos/moodle.png"
+                alt="..."
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <img src="../assets/img/before-footer.jpg" alt="" />
+    </div>
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 my-3 my-lg-0">
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.instagram.com/ufabc/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.facebook.com/ufabc/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.linkedin.com/school/ufabc/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
